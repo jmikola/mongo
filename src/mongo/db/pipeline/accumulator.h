@@ -88,6 +88,22 @@ namespace mongo {
     };
 
 
+    class AccumulatorCountCows : public Accumulator {
+    public:
+        virtual void processInternal(const Value& input, bool merging);
+        virtual Value getValue(bool toBeMerged) const;
+        virtual const char* getOpName() const;
+        virtual void reset();
+
+        static intrusive_ptr<Accumulator> create();
+
+    private:
+        AccumulatorCountCows();
+
+        long long _count;
+    };
+
+
     class AccumulatorFirst : public Accumulator {
     public:
         virtual void processInternal(const Value& input, bool merging);

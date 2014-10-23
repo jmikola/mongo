@@ -473,6 +473,7 @@ coredbEnv.Library("coredb", [
         "db/matcher/matcher.cpp",
         "db/pipeline/accumulator_add_to_set.cpp",
         "db/pipeline/accumulator_avg.cpp",
+        "db/pipeline/accumulator_count_cows.cpp",
         "db/pipeline/accumulator_first.cpp",
         "db/pipeline/accumulator_last.cpp",
         "db/pipeline/accumulator_min_max.cpp",
