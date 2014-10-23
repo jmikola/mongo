@@ -884,6 +884,14 @@ namespace mongo {
     };
 
 
+    class ExpressionRot13 : public ExpressionFixedArity<ExpressionRot13, 1> {
+    public:
+        // virtuals from ExpressionNary
+        virtual Value evaluateInternal(Variables* vars) const;
+        virtual const char *getOpName() const;
+    };
+
+
     class ExpressionSecond : public ExpressionFixedArity<ExpressionSecond, 1> {
     public:
         // virtuals from ExpressionNary
